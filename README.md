@@ -1,2 +1,7 @@
-# mernPOS
-MERN STACK POS
+# MERN STACK POS
+
+## backend
+### 
+
+## frontend
+### 
