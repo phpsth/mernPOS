@@ -8,11 +8,18 @@ const helloRoutes = require('./routers/helloRoute.js');
 const courseRoute = require('./routers/courseRoute.js');
 const authRoute = require('./routers/authRoute.js');
 const connectDB = require('./config/database.js');
+const cors = require('cors');
 
 connectDB();
 
 // security middle-ware
 app.use(helmet());
+
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
 
 // rate limiting
 const limiter = rateLimit({
@@ -56,5 +63,6 @@ app.use('/api/customers', require('./routers/customerRoute.js'));
 app.use('/api/orders', require('./routers/orderRoute.js'));
 app.use('/api/auth', require('./routers/authRoute.js'));
 app.use('/api/users', require('./routers/userRoute.js'));
+app.use('/api/stats', require('./routers/statsRoute.js'));
 
 module.exports = app;

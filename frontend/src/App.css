@@ -1,0 +1,126 @@
+/* src/App.css - Add layout styles */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: darkslateblue;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #007;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: green;
+  margin: 8px 0;
+}
+
+.stock {
+  color: darkblue;
+  font-size: 0.9rem;
+  margin: 8px;
+}
+
+h3 {
+  color: darkgray;
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.product-card:hover img {
+  transform: scale(1.5);
+}
+
+.product-card img {
+  transition: transform 0.3s ease;
+}
+
+/* src/App.css - Add layout styles */
+.main-layout {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.left-panel {
+  flex: 2;
+}
+
+.right-panel {
+  flex: 1;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .main-layout {
+    flex-direction: row;
+  }
+}
+
+/* src/App.css - Add interactive styles */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
