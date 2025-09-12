@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./backend/index.js",
-    "start": "node ./backend/index.js",
-    "init-admin": "node ./backend/scripts/init-admin.js"
+    "init-admin": "node ./backend/scripts/init-admin.js",
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
   },
   "repository": {
     "type": "git",
